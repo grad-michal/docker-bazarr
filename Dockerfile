@@ -13,12 +13,12 @@ echo "**** install packages ****" && \
 	py-gevent && \
  echo "**** install bazarr ****" && \
  if [ -z ${BAZARR_VERSION+x} ]; then \
-	BAZARR_VERSION=$(curl -sX GET "https://api.github.com/repos/morpheus65535/bazarr/releases/latest" \
+	BAZARR_VERSION=$(curl -sX GET "https://api.github.com/repos/grad-michal/bazarr/releases/latest" \
 	| awk '/tag_name/{print $4;exit}' FS='[""]'); \
  fi && \
  curl -o \
  /tmp/bazarr.tar.gz -L \
-	"https://github.com/morpheus65535/bazarr/archive/${BAZARR_VERSION}.tar.gz" && \
+	"https://github.com/grad-michal/bazarr/archive/${BAZARR_VERSION}.tar.gz" && \
  mkdir -p \
 	/app/bazarr && \
  tar xf \
